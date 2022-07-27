@@ -25,14 +25,14 @@ for($i = 0; $i < 12; $i++){
   $arr[] = rand(1, 99);
 }
 
-echo 'Print Array: ';
+echo 'Array: ';
 printArray($arr);
 
 echo PHP_EOL;
 
 echo 'Filter: ' . ($type === 1 ? 'ganjil' : 'genap') . PHP_EOL;
 
-echo 'Print Array: ';
+echo 'Array: ';
 
 printArray(array_values(array_filter($arr, fn($x) => $x % 2 === $modValue)));
 
