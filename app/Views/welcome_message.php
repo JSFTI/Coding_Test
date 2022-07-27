@@ -42,7 +42,13 @@
                 jk: target.querySelector('[name=\'jk\']:checked').value
             };
 
-            axios.post('<?= base_url('mahasiswa') ?>', jsonObject);
+            axios.post('<?= base_url('mahasiswa') ?>', jsonObject)
+                .then((res) =>{
+                    target.querySelector('[name=\'nim\']').value =
+                    target.querySelector('[name=\'nama\']').value =
+                    target.querySelector('[name=\'hp\']').value = '';
+                    target.querySelector('[name=\'jk\']:checked').checked = false; 
+                });
         });
     </script>
 </body>
